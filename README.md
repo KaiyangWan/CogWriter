@@ -21,9 +21,16 @@ CogWriter implements a novel cognitive writing approach that:
 
 ## Installation
 
+### Environment Setup
 ```bash
+# Create and activate conda environment
+conda create -n cogwriter python=3.12
+conda activate cogwriter
+
+# Install dependencies
 pip install -r requirements.txt
 ```
+
 
 ## File Structure
 
