@@ -1,6 +1,6 @@
 # CogWriter
 
-CogWriter is a cognitive writing framework designed to enhance LLMs' capabilities in generating high-quality long-form text under strict requirements.
+CogWriter is a cognitive writing framework designed to improve LLMs' capabilities in generating high-quality long-form text under strict requirements.
 
 ## Overview
 
@@ -71,8 +71,8 @@ vllm serve meta-llama/Llama-3.3-70B-Instruct --tensor-parallel-size 4
 ```bash
 python main.py \
     --model "Llama33-70b" \
-    --dataset_dir "datasets/short1.json" \
-    --output_dir "longGenBench_output/Llama33-70b/output_short1.json"
+    --dataset_dir "datasets/short.json" \
+    --output_dir "longGenBench_output/Llama33-70b/output_short.json"
 ```
 
 **Baseline Generation**
