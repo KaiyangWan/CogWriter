@@ -40,13 +40,13 @@ pip install -r requirements.txt
 │   ├── Agents/                 # Specialized cognitive agents
 │   │   ├── GenerationAgent.py  # Content generation agent
 │   │   └── PlanningAgent.py    # Strategic planning agent
-│   ├── BaselineGen.py         # Baseline generation implementation
-│   └── CogWriter.py           # Main framework orchestrator
-├── datasets/                  # Input datasets
-├── llms/                     # LLM interface implementations
-├── utils/                    # Utility functions
-├── longGenBench_output/      # Generation results and evaluations
-└── runningLogs/             # Execution logs
+│   ├── BaselineGen.py          # Baseline generation implementation
+│   └── CogWriter.py            # Main framework orchestrator
+├── datasets/                   # Input datasets
+├── llms/                       # LLM interface implementations
+├── utils/                      # Utility functions
+├── longGenBench_output/        # Generation results and evaluations
+└── runningLogs/                # Execution logs
 ```
 
 ## Usage
