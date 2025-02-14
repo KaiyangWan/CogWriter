@@ -110,3 +110,6 @@ python eval_longGen.py \
 | `--data` | Path to results JSON file |
 | `--csv` | Path for evaluation metrics CSV |
 
+## License
+
+This project is licensed under the MIT License.
