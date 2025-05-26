@@ -46,6 +46,8 @@ pip install -r requirements.txt
 ├── llms/                       # LLM interface implementations
 ├── utils/                      # Utility functions
 ├── longGenBench_output/        # Generation results and evaluations
+│   ├── eval_cogwriter.py       # Evaluate CogWriter
+│   └── eval_baseline.py        # Evaluate Baseline
 └── runningLogs/                # Execution logs
 ```
 
@@ -67,12 +69,13 @@ vllm serve meta-llama/Llama-3.3-70B-Instruct --tensor-parallel-size 4
 
 ### Running Experiments
 
-**CogWriter Framework**
+**CogWriter Generation**
 ```bash
 python main.py \
     --model "Llama33-70b" \
     --dataset_dir "datasets/short.json" \
     --output_dir "longGenBench_output/Llama33-70b/output_short.json"
+    --generator cogwriter
 ```
 
 **Baseline Generation**
@@ -86,8 +89,17 @@ python main.py \
 
 ### Evaluation
 
+**Baseline Evaluation**
 ```bash
-python eval_longGen.py \
+python eval_baseline.py \
+    --data "Llama33-70b/output_short_baseline.json" \
+    --csv "Llama33-70b/output_short_baseline.csv" \
+    --gpu 4
+```
+
+**CogWriter Evaluation**
+```bash
+python eval_cogwriter.py \
     --data "Llama33-70b/output_short_baseline.json" \
     --csv "Llama33-70b/output_short_baseline.csv" \
     --gpu 4
